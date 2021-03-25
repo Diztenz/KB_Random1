@@ -2,8 +2,10 @@ import random
 
 print('Choose number of exercises.')
 num = input()
-
-input = int
+print('Choose number of seconds per exercise')
+exercise = input()
+print('Choose number of seconds per rest')
+rest = input()
 
 import time
 
@@ -85,22 +87,25 @@ exerciseList = ['American Swing',
 
 
 print("Your " + (num) + " exercises are...")
-sampled_list = random.sample(exerciseList, input(num))
+sampled_list = random.sample(exerciseList, int(num))
 print ('\n'.join(sampled_list))
 time.sleep(10)
 
+#I would like user to input exercise time. Say num2
+
+# I would like user to input rest time here. say num3
 
 print(sampled_list[4])
-time.sleep(30)
+time.sleep(int(exercise)) #I would like to use num2 here
 
-print("Rest")
-time.sleep(10)
+print("Rest") 
+time.sleep(int(rest)) #I would like to use num3 here.
 print(sampled_list[9])
-time.sleep(30)
+time.sleep(int(exercise)) #I would like to use num2 here
 
 print("Rest")
-time.sleep(10)
+time.sleep(int(rest)) #I would like to use num3 here.
 
 print(sampled_list[14])
-time.sleep(30)
+time.sleep(int(exercise)) #I would like to use num2 here
 print("Congratulations, Workout Complete!")
