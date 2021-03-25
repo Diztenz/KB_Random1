@@ -7,11 +7,8 @@ input = int
 
 import time
 
-rounds = input('Enter the number of intervals: ')
-workout = input('Enter the time in seconds exercise: ')
-rest = input('Enter the time in seconds to rest: ')
 
-excerciseList = ['American Swing',
+exerciseList = ['American Swing',
 'Bicep Swings',
 'Bob and Weave',
 'Bottoms Up Clean'
@@ -88,25 +85,22 @@ excerciseList = ['American Swing',
 
 
 print("Your " + (num) + " exercises are...")
-sampled_list = random.sample(excerciseList, input(num))
+sampled_list = random.sample(exerciseList, input(num))
 print ('\n'.join(sampled_list))
+time.sleep(10)
 
 
+print(sampled_list[4])
+time.sleep(30)
 
-def countdown(count):
-    time_left = count
-    for i in range(count):
-        print(str(time_left) + "...")
-        time.sleep(1)
-        time_left -= 1
+print("Rest")
+time.sleep(10)
+print(sampled_list[9])
+time.sleep(30)
 
-for i in range(int(rounds)):
-    print("Round " + str(i + 1) + ". Go!")
-    time_left = int(workout)
-    countdown(time_left)
+print("Rest")
+time.sleep(10)
 
-    print("Rest!")
-    time_left = int(rest)
-    countdown(time_left)
-
-print("Done!")
+print(sampled_list[14])
+time.sleep(30)
+print("Congratulations, Workout Complete!")
