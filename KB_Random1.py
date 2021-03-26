@@ -90,9 +90,13 @@ time.sleep(10)
 
 for x in sampled_list:
     print(x)
-    time.sleep(int(exercise)) 
+    for i in range(int(exercise)):
+        print(i)
+        time.sleep(1)
 
     print("Rest") 
-    time.sleep(int(rest)) 
-    
+    for i in range(int(rest)):
+        print(i)
+        time.sleep(1) 
+
 print("Congratulations, Workout Complete!")
