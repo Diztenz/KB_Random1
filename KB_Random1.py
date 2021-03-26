@@ -88,17 +88,11 @@ sampled_list = random.sample(exerciseList, int(num))
 print ('\n'.join(sampled_list))
 time.sleep(10)
 
-print(sampled_list[4])
-time.sleep(int(exercise)) 
+for x in sampled_list:
+    print(x)
+    time.sleep(int(exercise)) 
 
-print("Rest") 
-time.sleep(int(rest)) 
-print(sampled_list[9])
-time.sleep(int(exercise)) 
-
-print("Rest")
-time.sleep(int(rest)) 
-
-print(sampled_list[14])
-time.sleep(int(exercise)) 
+    print("Rest") 
+    time.sleep(int(rest)) 
+    
 print("Congratulations, Workout Complete!")
