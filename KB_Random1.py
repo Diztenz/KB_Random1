@@ -1,11 +1,9 @@
 import random
+import time
 
 num = input('Choose number of exercises.\n')
 exercise = input('Choose number of seconds per exercise.\n')
 rest = input('Choose number of seconds per rest.\n')
-
-import time
-
 
 exerciseList = ['American Swing',
 'Bicep Swings',
@@ -90,13 +88,14 @@ time.sleep(10)
 
 for x in sampled_list:
     print(x)
-    for i in range(1, int(exercise)+1):
-        print(i, end=', ')
+    for i in range(int(exercise), 0, -1):
+        print('Time remaing:', i)
         time.sleep(1)
 
     print("Rest") 
-    for i in range(1, int(rest)+1):
-        print(i, end=', ')
-        time.sleep(1) 
+    for i in range(int(rest), 0, -1):
+        print('Rest time remaining:', i)
+        time.sleep(1)
 
 print("Congratulations, Workout Complete!")
+
